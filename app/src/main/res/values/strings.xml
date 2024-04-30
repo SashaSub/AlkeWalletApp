@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">AlkeWallet</string>
+    <string name="texto_bienvenida_login">El lugar mas seguro para tu dinero</string>
+    <string name="button_crear_cuenta">Crear cuenta nueva</string>
+    <string name="cuenta_existe">Ya tiene cuenta?</string>
+    <string name="email">Email</string>
+    <string name="saludo1">Logea y empeza a \ntransferir!</string>
+    <string name="email_hint">Ingresar tu email</string>
+    <string name="email_hint2">Ingresar Email</string>
+    <string name="password">Contraseña</string>
+    <string name="password_hint">Ingresar tu contraseña</string>
+    <string name="olvidar">Olvidaste tu contraseña?</string>
+    <string name="button_login">Login</string>
+    <string name="crear_cuenta">Crear una nueva cuenta</string>
+    <string name="titulo_registrarse">Registrarse y \nempezar a transferir</string>
+    <string name="nombre">Nombre</string>
+    <string name="ingresar_nombre">Ingresar nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="ingresar_apellido">Ingresar apellido</string>
+    <string name="re_password">Reingresar contraseña</string>
+    <string name="re_password_hint">Reingresar password</string>
+    <string name="button_crear_cuenta2">Crear cuenta</string>
+    <string name="cuenta_existe2">Ya tienes una cuenta??</string>
+    <string name="inicio">Inicio</string>
+    <string name="saludo">Hola, Amanda!</string>
+    <string name="balance">Balance Total</string>
+    <string name="number">$124.57</string>
+    <string name="send_money">Enviar Dinero</string>
+    <string name="ingresar">Ingresar dinero</string>
+    <string name="transacciones">Ultimas transacciones</string>
+    <string name="empty_transaction">No hay transacciones registradas!</string>
+    <string name="title_request">ingresar Dinero</string>
+    <string name="cantidad">Cantidad a ingresar</string>
+    <string name="cantidad_transferir">Cantidad a transferir</string>
+    <string name="sumEnviar">20.00 |</string>
+    <string name="amountTransferir">20.00 |</string>
+    <string name="amountTransferir2">12.50 |</string>
+    <string name="notas">Notas de transferencia</string>
+    <string name="agregarNotas">Agregar notas de transferencia(opcional)</string>
+    <string name="titulo_perfil">Mi perfil</string>
+    <string name="name">Amanda Alkemy</string>
+    <string name="perfilInfo">Mi información</string>
+    <string name="perfilTarjetas">Mis tarjetas</string>
+    <string name="perfilOpciones">Opciones</string>
+    <string name="perfilAyuda">Centro de ayuda</string>
+
+
+</resources>
