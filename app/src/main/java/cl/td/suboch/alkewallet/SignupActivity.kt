@@ -7,17 +7,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cl.td.suboch.alkewallet.databinding.ActivityProfileBinding
+import cl.td.suboch.alkewallet.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivitySignupBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_signup)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val login = findViewById<Button>(R.id.button_logear)
         login.setOnClickListener {
