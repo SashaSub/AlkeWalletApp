@@ -1,14 +1,10 @@
-package cl.td.suboch.alkewallet
+package cl.td.suboch.alkewallet.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import cl.td.suboch.alkewallet.databinding.ActivityHomePageEmptyBinding
+import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.databinding.ActivityLoginSignupBinding
 
 class LoginSignupActivity : AppCompatActivity() {
@@ -35,8 +31,9 @@ class LoginSignupActivity : AppCompatActivity() {
          *     }
          */
 
-        val login = findViewById<Button>(R.id.button_logear)
-        login.setOnClickListener {
+      //  val login = findViewById<Button>(R.id.button_logear)
+      //  login.setOnClickListener {
+            binding.buttonLogear.setOnClickListener {
             val abrirPantallaLogin = Intent(this, LoginActivity::class.java)
             //abrirPantallaLogin.putExtra("nombre", "Alex")
             // abrirPantallaLogin.putExtra("apellido", "Suboch")

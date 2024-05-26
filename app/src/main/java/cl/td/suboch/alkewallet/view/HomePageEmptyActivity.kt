@@ -1,21 +1,19 @@
-package cl.td.suboch.alkewallet
+package cl.td.suboch.alkewallet.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import cl.td.suboch.alkewallet.databinding.ActivityHomePageBinding
+import cl.td.suboch.alkewallet.R
+import cl.td.suboch.alkewallet.databinding.ActivityHomePageEmptyBinding
 
-class HomePageActivity : AppCompatActivity() {
+class HomePageEmptyActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityHomePageBinding
+    lateinit var binding: ActivityHomePageEmptyBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomePageBinding.inflate(layoutInflater)
+        binding = ActivityHomePageEmptyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val ingreso = findViewById<Button>(R.id.receive_money)

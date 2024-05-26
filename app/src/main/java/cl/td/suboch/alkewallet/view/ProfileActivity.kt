@@ -1,20 +1,20 @@
-package cl.td.suboch.alkewallet
+package cl.td.suboch.alkewallet.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cl.td.suboch.alkewallet.databinding.ActivityHomePageEmptyBinding
 import cl.td.suboch.alkewallet.databinding.ActivityProfileBinding
-import cl.td.suboch.alkewallet.databinding.ActivitySendMoneyBinding
 
-class SendMoneyActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivitySendMoneyBinding
-
+    lateinit var binding: ActivityProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySendMoneyBinding.inflate(layoutInflater)
+        binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 }

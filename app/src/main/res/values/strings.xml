@@ -43,6 +43,9 @@
     <string name="perfilTarjetas">Mis tarjetas</string>
     <string name="perfilOpciones">Opciones</string>
     <string name="perfilAyuda">Centro de ayuda</string>
+    <string name="user_name">User Name</string>
+    <string name="date">Date</string>
+    <string name="amount">Amount</string>
 
 
 </resources>

@@ -1,13 +1,10 @@
-package cl.td.suboch.alkewallet
+package cl.td.suboch.alkewallet.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import cl.td.suboch.alkewallet.databinding.ActivityHomePageEmptyBinding
+import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -36,5 +33,13 @@ class LoginActivity : AppCompatActivity() {
             // abrirPantallaLogin.putExtra("acepto_tyC", false)
             startActivity(abrirPantallaTransferFull)
         }
+
+        binding.buttonLogin.setOnClickListener {
+            //val intent = Intent(this, ListActivity::class.java)
+            //val intent = Intent(this, TabbedActivity::class.java)
+            val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

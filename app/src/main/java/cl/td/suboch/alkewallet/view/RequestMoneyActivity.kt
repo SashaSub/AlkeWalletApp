@@ -1,4 +1,4 @@
-package cl.td.suboch.alkewallet
+package cl.td.suboch.alkewallet.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
