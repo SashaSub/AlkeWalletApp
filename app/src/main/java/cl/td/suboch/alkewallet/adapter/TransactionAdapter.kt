@@ -46,7 +46,6 @@ class TransactionAdapter(private val listTransactions: Array<String>)
         //Get element from your dataset at this position and replace the contents of the view with that element
         //mostrar el titulo de la pelicula
         //val currentTransaction = listTransactions[position]
-        //holder.userName.text = listTransactions[position]
         holder.userName.text = listTransactions[position]
         //agregar texto en subtitulo
         holder.dateTransaction.text = "Oct 14, 10:24 AM"

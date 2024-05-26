@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.adapter.TransactionAdapter
 import cl.td.suboch.alkewallet.databinding.ActivityHomePageBinding

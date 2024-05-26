@@ -1,6 +1,7 @@
 package cl.td.suboch.alkewallet.model
 
 data class Transaction(
+
     val amount: Long,
     val concept: String,
     val date: String,
@@ -8,4 +9,6 @@ data class Transaction(
     val accountID: Long,
     val userID: Long,
     val toAccountID: Long
+
+
 )
