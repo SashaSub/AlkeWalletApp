@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import cl.td.suboch.alkewallet.R
@@ -23,11 +24,20 @@ class HomePageActivity : AppCompatActivity() {
         binding = ActivityHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Set OnClickListener using View Binding
+        binding.receiveMoney.setOnClickListener {
+            // Handle button click
+            // For example: show a toast
+            Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
+        }
+/*
         val ingreso = findViewById<Button>(R.id.receive_money)
         ingreso.setOnClickListener {
             val ingresarDinero = Intent(this, RequestMoneyActivity::class.java)
             startActivity(ingresarDinero)
         }
+
+ */
         val envio = findViewById<Button>(R.id.send_money)
         envio.setOnClickListener {
             val enviarDinero = Intent(this, SendMoneyActivity::class.java)

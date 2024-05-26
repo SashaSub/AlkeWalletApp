@@ -1,6 +1,10 @@
 package cl.td.suboch.alkewallet.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +43,24 @@ class RecyclerViewActivity : AppCompatActivity() {
        // val adaptadorTransaction = TransactionAdapter(transactions.sortedArray())
       //  binding.listaRecycler.adapter = adaptadorTransaction
 
+
+        // Set OnClickListener using View Binding
+        binding.receiveMoney.setOnClickListener {
+            // Handle button click
+            // For example: show a toast
+            //Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
+            val ingresarDinero = Intent(this, RequestMoneyActivity::class.java)
+            startActivity(ingresarDinero)
+        }
+
+        binding.sendMoney.setOnClickListener {
+            val enviarDinero = Intent(this, SendMoneyActivity::class.java)
+            startActivity(enviarDinero)
+        }
+        binding.perfilIcon.setOnClickListener {
+            val abrirPerfil = Intent(this, ProfileActivity::class.java)
+            startActivity(abrirPerfil)
+        }
     }
 
 
