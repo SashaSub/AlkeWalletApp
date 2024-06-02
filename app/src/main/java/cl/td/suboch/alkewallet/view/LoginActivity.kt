@@ -16,21 +16,16 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val crearCuenta = findViewById<Button>(R.id.button_crear_cuenta)
-        crearCuenta.setOnClickListener {
+
+        //val crearCuenta = findViewById<Button>(R.id.button_crear_cuenta)
+        binding.buttonCrearCuenta.setOnClickListener {
             val abrirPantallaCrear = Intent(this, SignupActivity::class.java)
-            //abrirPantallaLogin.putExtra("nombre", "Alex")
-            // abrirPantallaLogin.putExtra("apellido", "Suboch")
-            // abrirPantallaLogin.putExtra("acepto_tyC", false)
             startActivity(abrirPantallaCrear)
         }
 
-        val fullTransfer = findViewById<Button>(R.id.button_login)
-        fullTransfer.setOnClickListener {
+        //val fullTransfer = findViewById<Button>(R.id.button_login)
+        binding.buttonLogin.setOnClickListener {
             val abrirPantallaTransferFull = Intent(this, HomePageActivity::class.java)
-            //abrirPantallaLogin.putExtra("nombre", "Alex")
-            // abrirPantallaLogin.putExtra("apellido", "Suboch")
-            // abrirPantallaLogin.putExtra("acepto_tyC", false)
             startActivity(abrirPantallaTransferFull)
         }
 

@@ -16,14 +16,14 @@ class SignupActivity : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val login = findViewById<Button>(R.id.button_logear)
-        login.setOnClickListener {
+      //  val login = findViewById<Button>(R.id.button_logear)
+        binding.buttonLogear.setOnClickListener {
             val abrirPantallaLogin = Intent(this, LoginActivity::class.java)
             startActivity(abrirPantallaLogin)
         }
 
-        val emptyTransfer = findViewById<Button>(R.id.button_login)
-        emptyTransfer.setOnClickListener {
+        //val emptyTransfer = findViewById<Button>(R.id.button_login)
+        binding.buttonLogin.setOnClickListener {
             val homePageEmpty = Intent(this, HomePageEmptyActivity::class.java)
             startActivity(homePageEmpty)
         }

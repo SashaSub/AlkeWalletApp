@@ -16,18 +16,18 @@ class HomePageEmptyActivity : AppCompatActivity() {
         binding = ActivityHomePageEmptyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val ingreso = findViewById<Button>(R.id.receive_money)
-        ingreso.setOnClickListener {
+        //val ingreso = findViewById<Button>(R.id.receive_money)
+        binding.receiveMoney.setOnClickListener {
             val ingresarDinero = Intent(this, RequestMoneyActivity::class.java)
             startActivity(ingresarDinero)
         }
-        val envio = findViewById<Button>(R.id.send_money)
-        envio.setOnClickListener {
+        //val envio = findViewById<Button>(R.id.send_money)
+        binding.sendMoney.setOnClickListener {
             val enviarDinero = Intent(this, SendMoneyActivity::class.java)
             startActivity(enviarDinero)
         }
-        val perfil = findViewById<ImageView>(R.id.perfilIcon)
-        perfil.setOnClickListener {
+        //val perfil = findViewById<ImageView>(R.id.perfilIcon)
+        binding.perfilIcon.setOnClickListener {
             val abrirPerfil = Intent(this, ProfileActivity::class.java)
             startActivity(abrirPerfil)
         }

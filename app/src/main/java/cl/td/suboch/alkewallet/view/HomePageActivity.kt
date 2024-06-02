@@ -38,13 +38,13 @@ class HomePageActivity : AppCompatActivity() {
         }
 
  */
-        val envio = findViewById<Button>(R.id.send_money)
-        envio.setOnClickListener {
+        //val envio = findViewById<Button>(R.id.send_money)
+        binding.sendMoney.setOnClickListener {
             val enviarDinero = Intent(this, SendMoneyActivity::class.java)
             startActivity(enviarDinero)
         }
-        val perfil = findViewById<ImageView>(R.id.perfilIcon)
-        perfil.setOnClickListener {
+        //val perfil = findViewById<ImageView>(R.id.perfilIcon)
+        binding.perfilIcon.setOnClickListener {
             val abrirPerfil = Intent(this, ProfileActivity::class.java)
             startActivity(abrirPerfil)
         }
