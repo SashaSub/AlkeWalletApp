@@ -18,23 +18,19 @@ class SplashScreenActivity : AppCompatActivity() {
 
         //abrir pantalla con un click
         //se declara la imagen como una variable
-        /**
-         *
-        val logoApp = findViewById<ImageView>(R.id.logo)
-        logoApp.setOnClickListener {
+        binding.logo.setOnClickListener {
             val abrirPantallaLogin = Intent(this, LoginSignupActivity::class.java)
-            abrirPantallaLogin.putExtra("nombre", "Alex")
-            abrirPantallaLogin.putExtra("apellido", "Suboch")
-            abrirPantallaLogin.putExtra("acepto_tyC", false)
             startActivity(abrirPantallaLogin)
+            finish()
         }
-         */
+
 
           //Abrir pantalla con un timer
         var task: TimerTask? = object : TimerTask(){
             override fun run() {
                 val abrirPantallaLogin = Intent(baseContext, LoginSignupActivity ::class.java)
                 startActivity(abrirPantallaLogin)
+                finish()
             }
         }
         val timer = Timer()
