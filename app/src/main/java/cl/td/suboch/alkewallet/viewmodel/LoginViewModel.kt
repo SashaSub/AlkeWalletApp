@@ -17,11 +17,11 @@ class LoginViewModel : ViewModel() {
     /**
      * funcion que implementa una corrrutina para llamar a la Api
      */
-    fun hacerLogin(email: String, password: String) {
+    fun hacerLogin(email: String, contrasena: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 //Aca nosotros vamos a llamar a la API
-                if (email == "test@test.cl" && password == "1234") {
+                if (email == "test@test.cl" && contrasena == "1234") {
                     loginResultLiveData.postValue(true)
                 } else {
                     loginResultLiveData.postValue(false)
