@@ -5,18 +5,27 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import cl.td.suboch.alkewallet.HomeActivity
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.databinding.ActivityLoginBinding
+import cl.td.suboch.alkewallet.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLoginBinding
     lateinit var sharedPreferences: SharedPreferences
+    lateinit var viewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Configurar Binding
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Configurar ViewModel
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         //Vamos a implementar los SharedPreferences
         sharedPreferences = getSharedPreferences("Alke Wallet", MODE_PRIVATE)
@@ -39,8 +48,17 @@ class LoginActivity : AppCompatActivity() {
             //to clean:
             //editor.clear()
             editor.apply()
+            viewModel.hacerLogin(correoIngresado, passwordIngresado)
+        }
 
-
+        //COnfigurar observador, que observa el sujeto LoginResultLiveDAta
+        viewModel.loginResultLiveData.observe(this){ loginOk ->
+            if (loginOk == true) {
+                val irMenuPrincipal = Intent(this, HomeActivity::class.java)
+                startActivity(irMenuPrincipal)
+            }else {
+                Toast.makeText(this, "Datos Invalidos", Toast.LENGTH_LONG).show()
+            }
         }
 
  /**
