@@ -1,15 +1,11 @@
 package cl.td.suboch.alkewallet.view
 
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import cl.td.suboch.alkewallet.HomeActivity
-import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.databinding.ActivityLoginBinding
 import cl.td.suboch.alkewallet.viewmodel.LoginViewModel
 
@@ -54,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
         //COnfigurar observador, que observa el sujeto LoginResultLiveDAta
         viewModel.loginResultLiveData.observe(this){ loginOk ->
             if (loginOk == true) {
-                val irMenuPrincipal = Intent(this, HomeActivity::class.java)
+                val irMenuPrincipal = Intent(this, HomePageEmptyActivity::class.java)
                 startActivity(irMenuPrincipal)
             }else {
                 Toast.makeText(this, "Datos Invalidos", Toast.LENGTH_LONG).show()
