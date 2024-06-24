@@ -2,7 +2,7 @@ package cl.td.suboch.alkewallet.model
 
 data class Transaction(
 
-    val amount: Long,
+    val amount: String,
     val concept: String,
     val date: String,
     val type: String,
