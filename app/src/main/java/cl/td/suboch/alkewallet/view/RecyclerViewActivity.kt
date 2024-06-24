@@ -1,5 +1,6 @@
 package cl.td.suboch.alkewallet.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cl.td.suboch.alkewallet.AlkeWalletApp.Companion.usuarioLogeado
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.adapter.TransactionAdapter
 import cl.td.suboch.alkewallet.databinding.ActivityHomePageBinding
@@ -18,6 +20,7 @@ class RecyclerViewActivity : AppCompatActivity() {
    lateinit var binding: ActivityHomePageBinding
             //ActivityRecyclerViewBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomePageBinding.inflate(layoutInflater)
@@ -26,7 +29,9 @@ class RecyclerViewActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.lista_recycler_home)
         //val miInstancia = Singleton.obtenerInstancia()
         //miInstancia.datoEjemplo = "Hola, mundo!"
-
+        if (usuarioLogeado != null) {
+            binding.saludo.text = "Hola, ${usuarioLogeado?.first_name} ${usuarioLogeado?.last_name}"
+        }
 //crear lista de peliculas
         val transactions = arrayOf(
             "Yara Khalil",

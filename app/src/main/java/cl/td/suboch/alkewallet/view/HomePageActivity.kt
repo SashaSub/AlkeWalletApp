@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import cl.td.suboch.alkewallet.AlkeWalletApp
+import cl.td.suboch.alkewallet.AlkeWalletApp.Companion.usuarioLogeado
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.adapter.TransactionAdapter
 import cl.td.suboch.alkewallet.databinding.ActivityHomePageBinding

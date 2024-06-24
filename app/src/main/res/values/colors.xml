@@ -8,7 +8,7 @@
     <color name="plomo">#F3F4F5</color>
     <color name="text_blue">#1A87DD</color>
     <color name="button_blue">#1A87DD</color>
-
+    #97F3F4F5
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#1A87DD</color>
     <color name="mtrl_textinput_default_box_stroke_color1" tools:override="true">#72DB31</color>
 
