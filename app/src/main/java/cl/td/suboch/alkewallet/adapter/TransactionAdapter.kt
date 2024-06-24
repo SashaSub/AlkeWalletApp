@@ -44,7 +44,6 @@ class TransactionAdapter(private val listTransactions: Array<String>)
     //Configurar información en cada celda que vamos a mostrar en la lista
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         //Get element from your dataset at this position and replace the contents of the view with that element
-        //mostrar el titulo de la pelicula
         //val currentTransaction = listTransactions[position]
         holder.userName.text = listTransactions[position]
         //agregar texto en subtitulo
