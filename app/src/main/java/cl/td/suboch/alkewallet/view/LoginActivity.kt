@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import cl.td.suboch.alkewallet.AlkeWalletApp.Companion.tokenAccesso
+import cl.td.suboch.alkewallet.AlkeWalletApp.Companion.usuarioLogeado
 import cl.td.suboch.alkewallet.databinding.ActivityLoginBinding
 import cl.td.suboch.alkewallet.viewmodel.LoginViewModel
 
@@ -48,12 +50,33 @@ class LoginActivity : AppCompatActivity() {
         }
 
         //COnfigurar observador, que observa el sujeto LoginResultLiveDAta
-        viewModel.loginResultLiveData.observe(this){ loginOk ->
-            if (loginOk == true) {
-                val irMenuPrincipal = Intent(this, HomePageEmptyActivity::class.java)
+        //old form
+//        viewModel.loginResultLiveData.observe(this){ loginOk ->
+//            if (loginOk == true) {
+//                val irMenuPrincipal = Intent(this, RecyclerViewActivity::class.java)
+//                startActivity(irMenuPrincipal)
+//            }else {
+//                Toast.makeText(this, "Datos Invalidos", Toast.LENGTH_LONG).show()
+//            }
+//        }
+
+        //new form
+        //Se configura el observador que va a estar observando al sujeto "tokenLiveData"
+        viewModel.tokenLiveData.observe(this){ token ->
+            if (token != null) {
+                //Guardar token en variable global de la aplicacion
+                tokenAccesso = token
+                //Llamar a la API para obtener info del usuario
+                viewModel.obtenerDatosUser()
+                }
+        }
+
+        //Configurar el observador que va a estar observando al sujeto "usuarioLive Data"
+        viewModel.usuarioLiveData.observe(this){ usuario ->
+            if (usuario != null) {
+                usuarioLogeado = usuario
+                val irMenuPrincipal = Intent(this, RecyclerViewActivity::class.java)
                 startActivity(irMenuPrincipal)
-            }else {
-                Toast.makeText(this, "Datos Invalidos", Toast.LENGTH_LONG).show()
             }
         }
 
