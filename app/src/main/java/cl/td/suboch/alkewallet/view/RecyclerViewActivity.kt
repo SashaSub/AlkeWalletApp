@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import cl.td.suboch.alkewallet.AlkeWalletApp
 import cl.td.suboch.alkewallet.AlkeWalletApp.Companion.usuarioLogeado
 import cl.td.suboch.alkewallet.R
-import cl.td.suboch.alkewallet.adapter.TransactionAdapter
+import cl.td.suboch.alkewallet.view.adapter.TransactionAdapter
 import cl.td.suboch.alkewallet.databinding.ActivityHomePageBinding
 import cl.td.suboch.alkewallet.databinding.ActivityRecyclerViewBinding
 import cl.td.suboch.alkewallet.databinding.SinCuentaBinding
