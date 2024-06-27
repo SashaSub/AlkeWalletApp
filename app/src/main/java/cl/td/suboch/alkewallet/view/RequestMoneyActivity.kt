@@ -73,10 +73,4 @@ class RequestMoneyActivity : AppCompatActivity() {
             Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
         }
     }
-
-//    private fun goToHomePage() {
-//        val intent = Intent(this, HomePageActivity::class.java)
-//        startActivity(intent)
-//        finish()
-//    }
 }

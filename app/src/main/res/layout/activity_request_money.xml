@@ -109,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/jua"
-            android:text="@string/amountTransferir"
+            android:hint="@string/amountTransferir"
             android:textColor="@color/text_blue" />
 
     </com.google.android.material.textfield.TextInputLayout>

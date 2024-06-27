@@ -31,10 +31,10 @@ class RequestMoneyViewModel : ViewModel() {
 
                 val paymentRequest = PaymentRequest(type = "topup", concept = concept, amount = amount)
 
-                val enviarDinero = RetrofitInstancia.retrofit.create(TransactionService::class.java)
-                val envioLlamada = enviarDinero.sendPayment("Bearer $token", accountId, paymentRequest)
+                val recibirDinero = RetrofitInstancia.retrofit.create(TransactionService::class.java)
+                val llamadaRecibir = recibirDinero.sendPayment("Bearer $token", accountId, paymentRequest)
 
-                envioLlamada.enqueue(object: Callback<PaymentResponse> {
+                llamadaRecibir.enqueue(object: Callback<PaymentResponse> {
                     override fun onResponse(
                         call: Call<PaymentResponse>,
                         response: Response<PaymentResponse>
