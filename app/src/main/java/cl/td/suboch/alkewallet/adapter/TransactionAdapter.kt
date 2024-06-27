@@ -1,6 +1,8 @@
 package cl.td.suboch.alkewallet.adapter
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
+import android.icu.text.SimpleDateFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,18 +10,24 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import cl.td.suboch.alkewallet.AlkeWalletApp
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.model.Transaction
+import com.squareup.picasso.Picasso
+import java.util.Date
+import java.util.Locale
 
-class TransactionAdapter(private val listTransactions: Array<String>)
+class TransactionAdapter(private val listTransactions: List<Transaction>)
     : RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>(){
     class TransactionViewHolder(itemView: View)
         : RecyclerView.ViewHolder(itemView) {
+
+     //   val shortDate = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()).format(Date())
+
         val userName: TextView
         val dateTransaction: TextView
         val amountTransaction: TextView
         val avatarTransaction: ImageView
-
         init {
             //Define click listener for the ViewHolder's View
             userName = itemView.findViewById(R.id.user_name)
@@ -42,13 +50,15 @@ class TransactionAdapter(private val listTransactions: Array<String>)
     }
 
     //Configurar información en cada celda que vamos a mostrar en la lista
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         //Get element from your dataset at this position and replace the contents of the view with that element
-        //val currentTransaction = listTransactions[position]
-        holder.userName.text = listTransactions[position]
+        val currentTransaction = listTransactions[position]
+        holder.userName.text = AlkeWalletApp.usuarioLogeado?.first_name + ' ' + AlkeWalletApp.usuarioLogeado?.last_name
         //agregar texto en subtitulo
-        holder.dateTransaction.text = "Oct 14, 10:24 AM"
-        holder.amountTransaction.text = "$15.00"
+        holder.dateTransaction.text = currentTransaction.date
+        holder.amountTransaction.text = "$${currentTransaction.amount}"
+        holder.avatarTransaction.setImageResource(R.drawable.baseline_person_24) // Utiliza una imagen por defecto
     }
 
 

@@ -8,7 +8,7 @@
     tools:context=".view.RequestMoneyActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btnHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -42,15 +42,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:id="@+id/avatar_request"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:srcCompat="@drawable/contact_info" />
+        app:srcCompat="@drawable/profile_pic" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/jua"
+        android:text="@string/userNameRequest"
+        android:textColor="@color/negro"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/avatar_request"
+        app:layout_constraintTop_toBottomOf="@+id/titleRequest" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/jua"
+        android:text="@string/userEmailRequest"
+        android:textColor="#5E6061"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <TextView
         android:id="@+id/textView12"
@@ -62,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+        app:layout_constraintTop_toBottomOf="@+id/avatar_request" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
@@ -78,6 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amount_ingresar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/jua"
@@ -99,13 +127,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <TextView
-        android:id="@+id/agregarNotas"
+        android:id="@+id/agregarNotasTextView"
         style="@style/txt_black"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/back"
-        android:text="@string/agregarNotas"
         android:textColor="#591A1A1A"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
@@ -113,8 +140,29 @@
         app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/agregarNotasTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/agregarNotas"
+            android:textColor="#591A1A1A"
+            android:hint="@string/agregarNotas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/jua"
+            android:gravity="top"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/extended_fab"
+        android:id="@+id/btn_ingresar_dinero"
         style="@style/txt_white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -131,10 +179,10 @@
         app:iconGravity="textStart"
         app:iconTint="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/agregarNotas"
+        app:layout_constraintEnd_toEndOf="@+id/agregarNotasTextView"
         app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="@+id/agregarNotas"
-        app:layout_constraintTop_toBottomOf="@+id/agregarNotas"
+        app:layout_constraintStart_toStartOf="@+id/agregarNotasTextView"
+        app:layout_constraintTop_toBottomOf="@+id/agregarNotasTextView"
         app:layout_constraintVertical_bias="0.784" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

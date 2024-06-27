@@ -46,6 +46,10 @@
     <string name="user_name">User Name</string>
     <string name="date">Date</string>
     <string name="amount">Amount</string>
+    <string name="sin_cuenta">Todavía no tienes cuenta, \nte regalamos $5.000 en tu cuenta nueva!</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="userNameRequest">User Name</string>
+    <string name="userEmailRequest">User Email</string>
 
 
 </resources>

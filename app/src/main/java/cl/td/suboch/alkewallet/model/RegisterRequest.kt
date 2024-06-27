@@ -1,11 +1,10 @@
 package cl.td.suboch.alkewallet.model
 
-data class User(
-    val id: Int,
+data class RegisterRequest (
     val first_name: String,
     val last_name: String,
     val email: String,
     val password: String,
-    val roleId: Long = 2,
-    val points: Long = 0
+    val roleId : Long = 1,
+    val points : Long = 50
 )
