@@ -1,4 +1,4 @@
-package cl.td.suboch.alkewallet.adapter
+package cl.td.suboch.alkewallet.view.adapter
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
@@ -13,11 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import cl.td.suboch.alkewallet.AlkeWalletApp
 import cl.td.suboch.alkewallet.R
 import cl.td.suboch.alkewallet.model.Transaction
+import cl.td.suboch.alkewallet.model.db.TransactionEntidad
 import com.squareup.picasso.Picasso
 import java.util.Date
 import java.util.Locale
 
-class TransactionAdapter(private val listTransactions: List<Transaction>)
+class TransactionAdapter(private val listTransactions: List<TransactionEntidad>)
     : RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>(){
     class TransactionViewHolder(itemView: View)
         : RecyclerView.ViewHolder(itemView) {
