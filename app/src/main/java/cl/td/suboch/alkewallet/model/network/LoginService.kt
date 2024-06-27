@@ -31,6 +31,4 @@ interface LoginService {
     fun obtenerInfoLogin(
         @Header("Authorization") token: String
     ): Call<User>
-
-
 }

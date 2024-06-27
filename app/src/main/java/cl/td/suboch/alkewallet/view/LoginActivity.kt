@@ -80,12 +80,11 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
- /**
-        //val crearCuenta = findViewById<Button>(R.id.button_crear_cuenta)
-        binding.buttonCrearCuenta.setOnClickListener {
+         binding.buttonCrearCuenta.setOnClickListener {
             val abrirPantallaCrear = Intent(this, SignupActivity::class.java)
             startActivity(abrirPantallaCrear)
         }
+ /**
 
         //val fullTransfer = findViewById<Button>(R.id.button_login)
         binding.buttonLogin.setOnClickListener {

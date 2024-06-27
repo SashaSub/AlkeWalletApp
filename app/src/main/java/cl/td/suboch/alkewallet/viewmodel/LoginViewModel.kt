@@ -113,7 +113,6 @@ class LoginViewModel : ViewModel() {
                             usuarioLiveData.postValue(null)
                         }
                     }
-
                     override fun onFailure(call: Call<User>, t: Throwable) {
                         usuarioLiveData.postValue(null)
                     }
