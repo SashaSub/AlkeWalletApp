@@ -8,7 +8,7 @@
     tools:context=".view.RequestMoneyActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/backHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -77,21 +77,43 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
     <TextView
-        android:id="@+id/agregarNotas"
+        android:id="@+id/agregarNotasTextView"
         style="@style/txt_black"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/back"
-        android:text="@string/agregarNotas"
+
         android:textColor="#591A1A1A"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
         app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false"
+        android:hint="@string/agregarNotas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/agregarNotasTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/agregarNotasEnvio"
+            android:textColor="#591A1A1A"
+            android:hint="@string/agregarNotas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/jua"
+            android:gravity="top"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/extended_fab"
+        android:id="@+id/btn_send"
         style="@style/txt_black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -108,10 +130,10 @@
         app:iconGravity="textStart"
         app:iconTint="@color/negro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/agregarNotas"
+        app:layout_constraintEnd_toEndOf="@+id/agregarNotasTextView"
         app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="@+id/agregarNotas"
-        app:layout_constraintTop_toBottomOf="@+id/agregarNotas"
+        app:layout_constraintStart_toStartOf="@+id/agregarNotasTextView"
+        app:layout_constraintTop_toBottomOf="@+id/agregarNotasTextView"
         app:layout_constraintVertical_bias="0.784" />
 
     <EditText
@@ -126,7 +148,7 @@
         android:fontFamily="@font/jua"
         android:inputType="numberDecimal"
         android:paddingStart="10dp"
-        android:text="@string/amountTransferir2"
+        android:hint="@string/amountTransferir2"
         android:textAlignment="textStart"
         android:textColor="@color/verde"
         android:textSize="16sp"

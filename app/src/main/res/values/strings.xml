@@ -32,9 +32,9 @@
     <string name="title_request">ingresar Dinero</string>
     <string name="cantidad">Cantidad a ingresar</string>
     <string name="cantidad_transferir">Cantidad a transferir</string>
-    <string name="sumEnviar">20.00 |</string>
-    <string name="amountTransferir">20.00 |</string>
-    <string name="amountTransferir2">12.50 |</string>
+    <string name="sumEnviar">20.00</string>
+    <string name="amountTransferir">20.00</string>
+    <string name="amountTransferir2">12.50</string>
     <string name="notas">Notas de transferencia</string>
     <string name="agregarNotas">Agregar notas de transferencia(opcional)</string>
     <string name="titulo_perfil">Mi perfil</string>
@@ -43,13 +43,14 @@
     <string name="perfilTarjetas">Mis tarjetas</string>
     <string name="perfilOpciones">Opciones</string>
     <string name="perfilAyuda">Centro de ayuda</string>
-    <string name="user_name">User Name</string>
+    <string name="transaction_type">Type</string>
     <string name="date">Date</string>
     <string name="amount">Amount</string>
     <string name="sin_cuenta">Todavía no tienes cuenta, \nte regalamos $5.000 en tu cuenta nueva!</string>
     <string name="btn_aceptar">Aceptar</string>
     <string name="userNameRequest">User Name</string>
     <string name="userEmailRequest">User Email</string>
+    <string name="note">Note</string>
 
 
 </resources>

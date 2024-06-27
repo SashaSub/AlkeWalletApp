@@ -24,13 +24,15 @@ class TransactionAdapter(private val listTransactions: List<Transaction>)
 
      //   val shortDate = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()).format(Date())
 
-        val userName: TextView
+        val type: TextView
+        val concept: TextView
         val dateTransaction: TextView
         val amountTransaction: TextView
         val avatarTransaction: ImageView
         init {
             //Define click listener for the ViewHolder's View
-            userName = itemView.findViewById(R.id.user_name)
+            type = itemView.findViewById(R.id.transaction_type)
+            concept = itemView.findViewById(R.id.transaction_note)
             dateTransaction = itemView.findViewById(R.id.date_transaction)
             amountTransaction = itemView.findViewById(R.id.amount_transaction)
             avatarTransaction = itemView.findViewById(R.id.avatar_transaction)
@@ -54,8 +56,10 @@ class TransactionAdapter(private val listTransactions: List<Transaction>)
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         //Get element from your dataset at this position and replace the contents of the view with that element
         val currentTransaction = listTransactions[position]
-        holder.userName.text = AlkeWalletApp.usuarioLogeado?.first_name + ' ' + AlkeWalletApp.usuarioLogeado?.last_name
-        //agregar texto en subtitulo
+        //holder.userName.text = AlkeWalletApp.usuarioLogeado?.first_name + ' ' + AlkeWalletApp.usuarioLogeado?.last_name
+        //agregar info de transacciones
+        holder.type.text = currentTransaction.type
+        holder.concept.text = currentTransaction.concept
         holder.dateTransaction.text = currentTransaction.date
         holder.amountTransaction.text = "$${currentTransaction.amount}"
         holder.avatarTransaction.setImageResource(R.drawable.baseline_person_24) // Utiliza una imagen por defecto
