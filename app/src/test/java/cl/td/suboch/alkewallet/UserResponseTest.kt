@@ -61,7 +61,6 @@ class UserResponseTest {
                     "updatedAt": "2024-06-27T08:40:01.000Z"
                   }
                """
-
         val userJson = Gson().fromJson(json, User::class.java)
 
         Assert.assertEquals(3695, userJson.id)
